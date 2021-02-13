@@ -17,7 +17,7 @@ bool decodeGree(byte *bytes, int pulseCount)
       ((bytes[7] & 0xF0) >> 4) +
       0x0A) & 0xF0;
 
-    if (checksum == bytes[8]) {
+    if (checksum == bytes[7]) {
       Serial.println(F("Checksum matches"));
     } else {
       Serial.println(F("Checksum does not match"));
